@@ -25,18 +25,6 @@
         <tr><td><input type="checkbox" data-server="1.pl.socks5.nuv.su"></td><td><a href="tg://proxy?server=1.pl.socks5.nuv.su&port=1088&secret=" target="_blank">1.pl.socks5.nuv.su</a></td></tr>
     </tbody>
 </table>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const checkboxes = document.querySelectorAll("input[type="checkbox"]");
-    checkboxes.forEach(cb => {
-        const server = cb.getAttribute("data-server");
-        const saved = localStorage.getItem("checkbox_" + server);
-        if (saved === "true") cb.checked = true;
-        cb.addEventListener("change", function() {
-            localStorage.setItem("checkbox_" + server, this.checked);
-        });
-    });
-});
-</script>
+<script src="proxy.js"></script>
 </body>
 </html>

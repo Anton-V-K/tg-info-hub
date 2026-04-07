@@ -12,4 +12,21 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("checkbox_" + server, this.checked);
         });
     });
+
+    const links = document.querySelectorAll("tbody tr a");
+    links.forEach(link => {
+        link.addEventListener("click", function () {
+            const row = this.closest("tr");
+            if (!row) return;
+            const checkbox = row.querySelector("input[type='checkbox']");
+            if (!checkbox) return;
+            if (!checkbox.checked) {
+                checkbox.checked = true;
+                const server = checkbox.getAttribute("data-server");
+                if (server) {
+                    localStorage.setItem("checkbox_" + server, "true");
+                }
+            }
+        });
+    });
 });

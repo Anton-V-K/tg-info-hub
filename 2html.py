@@ -1,7 +1,7 @@
-﻿# (c)AI[perplexity.ai+CoPilot] 
+﻿# (c)AI[perplexity.ai+CoPilot]
 import argparse
 import os
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import parse_qs, urlparse
 
 parser = argparse.ArgumentParser(description='Convert plain-text URL list to clickable HTML.')
 parser.add_argument('input_file', help='Path to input text file with one URL per line')
@@ -19,7 +19,7 @@ html += '<link rel="stylesheet" href="styles.css">\n'
 html += '</head><body>\n'
 html += '<table>\n'
 html += '    <thead>\n'
-html += '        <tr><th>On</th><th>Link</th></tr>\n'
+html += '        <tr><th>On</th><th>Type</th><th>Link</th></tr>\n'
 html += '    </thead>\n'
 html += '    <tbody>\n'
 for url in urls:
@@ -28,8 +28,19 @@ for url in urls:
     server = query.get('server', [''])[0]
     port = query.get('port', [''])[0]
     secret = query.get('secret', [''])[0]
+    path = parsed.path.lower()
+    if path.endswith('/proxy') or path == '/proxy':
+        proxy_type = 'MTPROTO'
+    elif path.endswith('/socks') or path == '/socks':
+        proxy_type = 'SOCKS5'
+    else:
+        proxy_type = ''
     tg_link = f"tg://proxy?server={server}&port={port}&secret={secret}"
-    html += f'        <tr><td><input type="checkbox" data-server="{server}"></td><td><a href="{tg_link}" target="_blank">{server}</a></td></tr>\n'
+    html += f'        <tr>'
+    html += f'<td><input type="checkbox" data-server="{server}"></td>'
+    html += f'<td>{proxy_type}</td>'
+    html += f'<td><a href="{tg_link}" target="_blank">{server}</a></td>'
+    html += '</tr>\n'
 html += '    </tbody>\n'
 html += '</table>\n'
 html += '<script src="scripts.js"></script>\n'

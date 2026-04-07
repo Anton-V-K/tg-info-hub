@@ -1,6 +1,8 @@
 ﻿# (c)AI[perplexity.ai+CoPilot]
 import argparse
 import os
+
+from datetime import datetime
 from urllib.parse import parse_qs, urlparse
 
 parser = argparse.ArgumentParser(description='Convert plain-text URL list to clickable HTML.')
@@ -17,6 +19,7 @@ html = f"<!DOCTYPE html><html><head><title>Auto-generated from '{args.input_file
 html += '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
 html += '<link rel="stylesheet" href="styles.css">\n'
 html += '</head><body>\n'
+html += f'<h1>Auto-generated from \'{args.input_file}\'</h1>\n'
 html += '<table>\n'
 html += '    <thead>\n'
 html += '        <tr><th>On</th><th>Type</th><th>Link</th></tr>\n'
@@ -43,6 +46,7 @@ for url in urls:
     html += '</tr>\n'
 html += '    </tbody>\n'
 html += '</table>\n'
+html += f'<p>Generated {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>\n'
 html += '<script src="scripts.js"></script>\n'
 html += '</body>\n'
 html += '</html>'

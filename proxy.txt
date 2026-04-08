@@ -19,4 +19,6 @@ https://t.me/proxy?server=xor.fi.1.mtproto.ru&port=443&secret=ee2111222233334444
 https://t.me/proxy?server=z.7.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=zo.2.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=zo.3.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
+https://t.me/proxy?server=zo.de.1.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
+https://t.me/proxy?server=zo.nl.1.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
 https://t.me/socks?server=1.pl.socks5.nuv.su&port=1088&user=public&pass=ROhQeiUMyH3MydvYPytyo76Hy2CcOakB

@@ -14,6 +14,7 @@ https://t.me/proxy?server=he.na.2.mtproto.ru&port=443&secret=ee21112222333344445
 https://t.me/proxy?server=he.na.6.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=he.na.7.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=ne.2.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
+https://t.me/proxy?server=ov.4.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=ozon.cloudns.nz.mtproto.ru&port=443&secret=eebcfea75cdb00075a3d35da3e9a3921966f7a6f6e2e7275
 https://t.me/proxy?server=pl2.nl.1.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d
 https://t.me/proxy?server=pl2.sw.1.mtproto.ru&port=443&secret=ee2111222233334444555566667777888862726f777365722e79616e6465782e636f6d

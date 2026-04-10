@@ -19,7 +19,7 @@ html = f"<!DOCTYPE html><html><head><title>Generated from '{args.input_file}'</t
 html += '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
 html += '<link rel="stylesheet" href="styles.css">\n'
 html += '</head><body>\n'
-html += f'<h1>Auto-generated from \'{args.input_file}\'</h1>\n'
+html += f'<h1>Generated from \'{args.input_file}\'</h1>\n'
 html += '<table>\n'
 html += '    <thead>\n'
 html += '        <tr><th>On</th><th>Type</th><th>Link</th></tr>\n'

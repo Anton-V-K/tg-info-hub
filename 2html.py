@@ -15,7 +15,7 @@ with open(args.input_file, 'r') as f:
 base_name = os.path.splitext(os.path.basename(args.input_file))[0]
 output_file = f'{base_name}.html'
 
-html = f"<!DOCTYPE html><html><head><title>Auto-generated from '{args.input_file}'</title>\n"
+html = f"<!DOCTYPE html><html><head><title>Generated from '{args.input_file}'</title>\n"
 html += '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
 html += '<link rel="stylesheet" href="styles.css">\n'
 html += '</head><body>\n'
@@ -46,7 +46,7 @@ for url in urls:
     html += '</tr>\n'
 html += '    </tbody>\n'
 html += '</table>\n'
-html += f'<p>Generated {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>\n'
+html += f'<p>Updated {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>\n'
 html += '<script src="scripts.js"></script>\n'
 html += '</body>\n'
 html += '</html>'
